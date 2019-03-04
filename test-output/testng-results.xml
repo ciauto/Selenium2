@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6818" started-at="2019-03-02T18:03:57Z" finished-at="2019-03-02T18:04:04Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6818" started-at="2019-03-02T18:03:57Z" finished-at="2019-03-02T18:04:04Z">
+      <class name="seleniumAdv3.ScreenCaptureWithDynamicFileName">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:seleniumAdv3.ScreenCaptureWithDynamicFileName@4b553d26]" name="setUp" is-config="true" duration-ms="4127" started-at="2019-03-02T18:03:57Z" finished-at="2019-03-02T18:04:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testScreenshots()[pri:0, instance:seleniumAdv3.ScreenCaptureWithDynamicFileName@4b553d26]" name="testScreenshots" duration-ms="1548" started-at="2019-03-02T18:04:01Z" finished-at="2019-03-02T18:04:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testScreenshots -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:seleniumAdv3.ScreenCaptureWithDynamicFileName@4b553d26]" name="tearDown" is-config="true" duration-ms="1121" started-at="2019-03-02T18:04:03Z" finished-at="2019-03-02T18:04:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- seleniumAdv3.ScreenCaptureWithDynamicFileName -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
