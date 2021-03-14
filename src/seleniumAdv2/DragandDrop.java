@@ -21,6 +21,8 @@ public class DragandDrop {
 		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
+		
+	
 		baseUrl = "http://www.dhtmlx.com/docs/products/dhtmlxTree/";
 		// Maximize the browser's window
 		driver.manage().window().maximize();
@@ -34,7 +36,11 @@ public class DragandDrop {
 		WebElement toElement1 = driver.findElement(By.xpath("//div[@id='treebox2']//span[text()='Bestsellers']"));
 		//Scroll to an element
 		js.executeScript("arguments[0].scrollIntoView(true);", fromElement1);
+		
 		js.executeScript("window.scrollBy(0, -400);");
+		
+		
+		
 		Thread.sleep(4000);
 		Actions action = new Actions(driver);
 		// Click and hold, move to element, release, build and perform

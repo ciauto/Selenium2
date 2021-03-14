@@ -17,11 +17,16 @@ public class MouseactionTD {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://www.td.com");
-		WebElement products_menu=driver.findElement(By.xpath("html/body/div[3]/div[3]/header[1]/div[3]/div/div[1]/nav/ul/li[3]"));
+		
+		driver.findElement(By.id("ensCall")).click();
+		
+		WebElement products_menu=driver.findElement(By.linkText("Products"));
 		Actions action=new Actions(driver);
-		action.moveToElement(products_menu).perform();
-		driver.findElement(By.xpath("html/body/div[3]/div[3]/header[1]/div[3]/div/div[1]/nav/ul/li[3]/ul/li[3]/a")).click();
+		action.moveToElement(products_menu).build().perform();
+		
+		
+		driver.findElement(By.linkText("Promotions & Offers")).click();
 		Thread.sleep(7000);
-		driver.close();;
+		driver.close();
 	}
 }

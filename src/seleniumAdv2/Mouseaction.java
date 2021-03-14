@@ -3,8 +3,10 @@ package seleniumAdv2;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -12,15 +14,19 @@ public class Mouseaction {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.gecko.driver", "C:\\driver\\geckodriver.exe");
-		WebDriver driver=new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		// Maximize the browser's window
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.busyqa.com/");
-		WebElement class_menu=driver.findElement(By.xpath("//p[@id='DrpDwnMn02label']"));
+		
+		WebElement classes_menu=driver.findElement(By.id("comp-juvbfjel2bg"));
+	
 		Actions action=new Actions(driver);
-		action.moveToElement(class_menu).build().perform();
-		driver.findElement(By.xpath("//p[@class='ddm1repeaterButtonlabel']")).click();
+			
+		action.moveToElement(classes_menu).build().perform();
+		
 		Thread.sleep(6000);
 		driver.quit();
 	}

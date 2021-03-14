@@ -35,6 +35,7 @@ public class ScreenCaptureWithDynamicFileName {
 		driver.findElement(By.id("user_password")).sendKeys("password");
 		driver.findElement(By.name("submit")).click();
 		
+		
 	}
 
 	public static String getRandomString(int length) {

@@ -33,22 +33,22 @@ public class TVO_ORG {
 		System.out.println(width);
 		js.executeScript("window.scrollBy(0, 1200);");
 		//Thread.sleep(6000);
-		System.out.println(driver.findElement(By.xpath("//a[@href='/about/jobs']")).getText());
+		System.out.println(driver.findElement(By.linkText("Work at TVO")).getText());
 		
 		WebDriverWait wait=new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/about/jobs']")));
-		driver.findElement(By.xpath("//a[@href='/about/jobs']")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Work at TVO")));
+		driver.findElement(By.linkText("Work at TVO")).click();
 		System.out.println("------After Click on Jobs at TVO hyper link");
 		//Thread.sleep(4000);
 		
 		js.executeScript("window.scrollBy(0, 1200);");
 		//Thread.sleep(6000);
-		WebElement ele=driver.findElement(By.xpath("//a[@href='/job-postings']"));
+		WebElement ele=driver.findElement(By.xpath("//a[contains(text(),'Browse Current Job Postings')]"));
 		js.executeScript("arguments[0].scrollIntoView(true);", ele);
 		//scroll little bit up
 		js.executeScript("window.scrollBy(0, -200);");
 		System.out.println(ele.getText());
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		ele.click();
 		System.out.println("------After Click on Job Search button");
 		winids=driver.getWindowHandles();
@@ -61,19 +61,28 @@ public class TVO_ORG {
 		//switch focus to newly opened Job Search Tab
 		driver.switchTo().window(tvoJobSearchTab);
 		
-		//switch focus to frame=icims_content_iframe,  Iframe name information is available in the HTML of the page
+		driver.findElement(By.id("SearchInput")).sendKeys("Selenium");
 		
-		driver.switchTo().frame("icims_content_iframe");
+		// we wait until activate job alert for this search web element visible by providing 10 sec of wait
 		
-		driver.findElement(By.id("jsb_f_keywords_i")).sendKeys("Selenium");
-		driver.findElement(By.id("jsb_form_submit_i")).click();
-		String expectedText="Sorry, no jobs were found that match your search criteria. Please try other selections.";
-		String actualText=driver.findElement(By.xpath("//div[@class='iCIMS_Message iCIMS_ErrorMessage iCIMS_GenericMessage']")).getText();
-		if(expectedText.equals(actualText)) {
-			System.out.println("Test passed");
-		}else {
-			System.out.println("Test failed");
-		}
+	//	WebElement dynamic_btn_activate_alert = driver.findElement(By.xpath("//body/div[@id='PageContent']/div[2]/div[1]/div[2]/div[3]/div[1]/div[3]/p[1]/button[1]"));
+	//	wait.until(ExpectedConditions.visibilityOf(dynamic_btn_activate_alert));
+		
+		
+		String expectedText="Showing 0 of 0 opportunities";
+		String actualText=driver.findElement(By.xpath("//h2[contains(text(),'Showing 0 of 0 opportunities')]")).getText();
+		System.out.println(actualText);
+		
+		  if(expectedText.equals(actualText)) 
+		  { 
+			  System.out.println("Test passed");
+		  }
+		  else 
+		  { 
+			  System.out.println("Test failed");
+			  
+		  }
+		 
 		driver.quit();
 	}
 

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumAdv3.ScreenCaptureWithDynamicFileName">
+      <class name="seleniumAdv2.AutoComplete">
         <methods>
-          <include name="testScreenshots"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="teardown"/>
+          <include name="testcase"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- seleniumAdv3.ScreenCaptureWithDynamicFileName -->
+      </class> <!-- seleniumAdv2.AutoComplete -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

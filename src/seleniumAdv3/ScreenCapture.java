@@ -15,8 +15,24 @@ public class ScreenCapture {
 		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.facebook.com");
+		
+		//String fileName = "automation" + getRandomString(4) +".png";
+			
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File("c:\\users\\Naresh\\desktop\\capturescreen.jpg"));
+		//FileUtils.copyFile(scrFile, new File("C:\\screenshot\\" + fileName));
+		FileUtils.copyFile(scrFile, new File("C:\\screenshot\\screenshots.jpg"));
+		
+		
 		driver.quit();
 	}
+	
+	public static String getRandomString(int length) {
+		StringBuilder sb = new StringBuilder();
+		String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+		for (int i = 0; i < length; i++) {
+			int index = (int) (Math.random() * characters.length());
+			sb.append(characters.charAt(index));
+		}
+		return sb.toString();
+}
 }

@@ -16,6 +16,8 @@ public class ScreenCaptureWhenFailure {
 		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.facebook.com");
+		
+		
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		
 		
@@ -26,7 +28,7 @@ public class ScreenCaptureWhenFailure {
 		
 		catch (Throwable t) 
 		{
-			FileUtils.copyFile(scrFile, new File("c:\\screenshot\\captureerrorscreen.jpg"));
+			FileUtils.copyFile(scrFile, new File("c:\\screenshot\\captureerror1.jpg"));
 			driver.quit();
 		}
 		

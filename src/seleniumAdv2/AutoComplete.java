@@ -24,12 +24,12 @@ public class AutoComplete {
 	@Test
 	public void testcase() throws InterruptedException{
 		String partialtext="Toronto";
-		String searchingtext = "Toronto, ON, Canada (YYZ - Pearson Intl.)";
-		driver.findElement(By.xpath("//a[@id='tab-flight-tab']")).click();
-		driver.findElement(By.xpath("//input[@id='flight-origin']")).clear();
-		driver.findElement(By.xpath("//input[@id='flight-origin']")).sendKeys(partialtext);
+		String searchingtext = "Toronto (YYZ - Pearson Intl.) Ontario, Canada";
+		driver.findElement(By.xpath("//div[@id='location-field-destination-menu']//button[@class='uitk-faux-input']")).click();
+		
+		driver.findElement(By.xpath("//input[@id='location-field-destination']")).sendKeys(partialtext);
 		Thread.sleep(1000);
-		WebElement element = driver.findElement(By.xpath("//*[@id='typeahead-list']/div/div/ul"));
+		WebElement element = driver.findElement(By.xpath("//ul[@class='uitk-typeahead-results no-bullet']"));
 		List<WebElement> results = element.findElements(By.tagName("li"));
 		int size = results.size();
 		for(int i=0; i<size; i++)
@@ -41,6 +41,7 @@ public class AutoComplete {
 		{
 			if(result.getText().equals(searchingtext))
 				result.click();
+			Thread.sleep(4000);
 			break;
 		}
 	}

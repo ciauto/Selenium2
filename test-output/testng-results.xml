@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6818" started-at="2019-03-02T18:03:57Z" finished-at="2019-03-02T18:04:04Z">
+  <suite name="Default suite" duration-ms="19017" started-at="2020-08-22T19:48:17Z" finished-at="2020-08-22T19:48:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6818" started-at="2019-03-02T18:03:57Z" finished-at="2019-03-02T18:04:04Z">
-      <class name="seleniumAdv3.ScreenCaptureWithDynamicFileName">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:seleniumAdv3.ScreenCaptureWithDynamicFileName@4b553d26]" name="setUp" is-config="true" duration-ms="4127" started-at="2019-03-02T18:03:57Z" finished-at="2019-03-02T18:04:01Z">
+    <test name="Default test" duration-ms="19017" started-at="2020-08-22T19:48:17Z" finished-at="2020-08-22T19:48:36Z">
+      <class name="seleniumAdv2.AutoComplete">
+        <test-method status="PASS" signature="setup()[pri:0, instance:seleniumAdv2.AutoComplete@2781e022]" name="setup" is-config="true" duration-ms="10560" started-at="2020-08-22T19:48:17Z" finished-at="2020-08-22T19:48:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testScreenshots()[pri:0, instance:seleniumAdv3.ScreenCaptureWithDynamicFileName@4b553d26]" name="testScreenshots" duration-ms="1548" started-at="2019-03-02T18:04:01Z" finished-at="2019-03-02T18:04:03Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testcase()[pri:0, instance:seleniumAdv2.AutoComplete@2781e022]" name="testcase" duration-ms="6518" started-at="2020-08-22T19:48:27Z" finished-at="2020-08-22T19:48:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testScreenshots -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:seleniumAdv3.ScreenCaptureWithDynamicFileName@4b553d26]" name="tearDown" is-config="true" duration-ms="1121" started-at="2019-03-02T18:04:03Z" finished-at="2019-03-02T18:04:04Z">
+        </test-method> <!-- testcase -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:seleniumAdv2.AutoComplete@2781e022]" name="teardown" is-config="true" duration-ms="1901" started-at="2020-08-22T19:48:34Z" finished-at="2020-08-22T19:48:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- seleniumAdv3.ScreenCaptureWithDynamicFileName -->
+        </test-method> <!-- teardown -->
+      </class> <!-- seleniumAdv2.AutoComplete -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
